@@ -1,0 +1,13 @@
+[book]
+authors = ["Amaan Khan", "akhan4u"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Linux Essentials Training"
+
+[output.html]
+theme = "my-theme"
+default-theme = "navy"
+preferred-dark-theme = "navy"
+git-repository-url = "https://github.com/rust-lang/mdBook"
+git-repository-icon = "fa-github"

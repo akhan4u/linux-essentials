@@ -1,0 +1,1127 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js navy">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Linux Essentials Training</title>
+        
+        <meta name="robots" content="noindex" />
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "navy";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('navy')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="Introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="Training_Day1.html"><strong aria-hidden="true">1.1.</strong> Workshop Day1</a></li><li class="chapter-item expanded "><a href="Training_Day2.html"><strong aria-hidden="true">1.2.</strong> Workshop Day2</a></li><li class="chapter-item expanded "><a href="Training_Day3.html"><strong aria-hidden="true">1.3.</strong> Workshop Day3</a></li><li class="chapter-item expanded "><a href="Training_Day4.html"><strong aria-hidden="true">1.4.</strong> Workshop Day4</a></li><li class="chapter-item expanded "><a href="Training_Day5.html"><strong aria-hidden="true">1.5.</strong> Workshop Day5</a></li><li class="chapter-item expanded "><a href="Training_Day6.html"><strong aria-hidden="true">1.6.</strong> Workshop Day6</a></li><li class="chapter-item expanded "><a href="Training_Day7.html"><strong aria-hidden="true">1.7.</strong> Workshop Day7</a></li><li class="chapter-item expanded "><a href="Training_Day8.html"><strong aria-hidden="true">1.8.</strong> Workshop Day8</a></li><li class="chapter-item expanded "><a href="Training_Day9.html"><strong aria-hidden="true">1.9.</strong> Workshop Day9</a></li></ol></li><li class="chapter-item expanded "><a href="cheatsheet.html"><strong aria-hidden="true">2.</strong> Cheatsheets</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="user_management_cheatsheet.html"><strong aria-hidden="true">2.1.</strong> User Management</a></li><li class="chapter-item expanded "><a href="ubuntu-packagemangers.html"><strong aria-hidden="true">2.2.</strong> Ubuntu Package Managers</a></li><li class="chapter-item expanded "><a href="centos_yum.html"><strong aria-hidden="true">2.3.</strong> Redhat Package Manager - YUM</a></li><li class="chapter-item expanded "><a href="centos_rpm.html"><strong aria-hidden="true">2.4.</strong> Redhat Package Manager - RPM</a></li><li class="chapter-item expanded "><a href="vim.html"><strong aria-hidden="true">2.5.</strong> Vi Editor</a></li><li class="chapter-item expanded "><a href="command_find.html"><strong aria-hidden="true">2.6.</strong> find command</a></li><li class="chapter-item expanded "><a href="command_sed.html"><strong aria-hidden="true">2.7.</strong> sed command</a></li><li class="chapter-item expanded "><a href="command_grep.html"><strong aria-hidden="true">2.8.</strong> grep command</a></li><li class="chapter-item expanded "><a href="command_common.html"><strong aria-hidden="true">2.9.</strong> common commands</a></li></ol></li><li class="chapter-item expanded "><a href="Q_nd_A.html"><strong aria-hidden="true">3.</strong> QnA</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="maintainer.html">About me!</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Linux Essentials Training</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        <a href="https://github.com/rust-lang/mdBook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#introduction" id="introduction">Introduction</a></h1>
+<p>Indeed during my college days <strong>I used to hate programming</strong>, it was difficult to understand the objective behind using programs and their purpose. Understanding how it was running on the system was another heck of a challenge. Demystifying essential components of an operating system is indeed a challenge unless you work on Linux.</p>
+<p><em>Linux has been my first love, since the day I came across it</em>. It helps you understand the fundamentals of the OS &amp; it's working, which can immensely boost your productivity. Linux is also one of the most popular and most adopted Operating systems in the world right next to Microsoft Windows. 99% of the world's Super Computers are powered with Linux. Everything right from your Cellphone to Cloud-based systems runs on some form of Linux.</p>
+<p><img src="https://global-uploads.webflow.com/5d71c5b5ed21579fe7c3535a/5e4b3d5264f7f54d7b331ac2_server-operating-system-market-share-2018.png" height="350"></img></p>
+<p>I had planned to take free training on Linux in which I covered following aspects of the Linux OS. This training is intended for someone who is starting his journey or someone who already has some familiarity.</p>
+<ul>
+<li>
+<p><a href="Training_Day1.html">Introduction to Linux</a></p>
+</li>
+<li>
+<p><a href="Training_Day2.html">Introduction to Linux File system</a></p>
+</li>
+<li>
+<p><a href="Training_Day3.html">LFS: Exploring File &amp; Directory Attributes</a></p>
+</li>
+<li>
+<p><a href="Training_Day4.html">Working with Files and Directories</a></p>
+</li>
+<li>
+<p><a href="Training_Day6.html">Using VI Editor</a></p>
+</li>
+<li>
+<p><a href="Training_Day5.html">Command Utilities</a></p>
+</li>
+<li>
+<p><a href="Training_Day7.html">Performing Basic Process Control</a></p>
+</li>
+<li>
+<p><a href="Training_Day7.html">User Management</a></p>
+</li>
+<li>
+<p><a href="Training_Day8.html">Package Management</a></p>
+</li>
+<li>
+<p><a href="Training_Day8.html">System Performance Monitoring</a></p>
+</li>
+<li>
+<p><a href="Training_Day9.html">Network Management</a></p>
+</li>
+<li>
+<p><a href="Training_Day9.html">Performing Remote Connections and File Transfers</a></p>
+</li>
+</ul>
+<br>
+<br>
+<div align="center">Made with <img src="https://image.flaticon.com/icons/svg/860/860906.svg" width="40" height="40" title="I love balloons!"> by <a href="https://about.me/amaankhan4u" target="_blank">Amaan</a></div>
+<h1><a class="header" href="#day1--introduction-to-linux-" id="day1--introduction-to-linux-">Day1 ( Introduction to Linux )</a></h1>
+<p>It was mostly an Introductory class of the workshop, however I had shared my most important advice.</p>
+<h3><a class="header" href="#learning-the-art-of-doing-one-thing-well" id="learning-the-art-of-doing-one-thing-well">Learning the Art of Doing one thing well</a></h3>
+<ul>
+<li>
+<p><em>Pick one small thing that will help with my problem</em></p>
+</li>
+<li>
+<p><em>Make Sure I understand it pretty well!</em></p>
+</li>
+<li>
+<p><em>Celebrate &amp; Repeat!</em></p>
+</li>
+</ul>
+<h2><a class="header" href="#agenda-for-day1" id="agenda-for-day1">Agenda for Day1</a></h2>
+<ul>
+<li>Workshop Kickoff!</li>
+<li>Trainer Introduction</li>
+<li>The Art of <em>Doing One Thing At a Time!</em></li>
+<li>Some Mind-Blowing Facts about Linux! 🤯</li>
+<li>Overview of the Linux Operating System</li>
+<li><a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg">Linux Distributions</a></li>
+<li>Logging in to Linux system</li>
+<li>Kernel</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cJsVxEpJy3U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1><a class="header" href="#day2--introduction-to-linux-file-system-" id="day2--introduction-to-linux-file-system-">Day2 ( Introduction to Linux File System )</a></h1>
+<p>After introducing the course, we covered the most important concept of the Linux operating system i.e <em>the file-system</em>.</p>
+<p>Ironically, do you know? Everything in Linux is a file!</p>
+<h2><a class="header" href="#agenda-for-day2" id="agenda-for-day2">Agenda for Day2</a></h2>
+<ul>
+<li>Directory Hierarchy</li>
+<li>Basics of File</li>
+<li>UNIX file system</li>
+<li>Inode Structure</li>
+<li>Links in Unix</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/-2Na_dO5nxI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1><a class="header" href="#day3--lfs-exploring-file--directory-attributes-" id="day3--lfs-exploring-file--directory-attributes-">Day3 ( LFS: Exploring File &amp; Directory Attributes )</a></h1>
+<p>We saw what attributes does file and directories carry, by understanding how to modify and query them.</p>
+<h2><a class="header" href="#agenda-for-day3" id="agenda-for-day3">Agenda for Day3</a></h2>
+<ul>
+<li>Displaying the contents of a file</li>
+<li>File and Directory Attributes</li>
+<li>File and Directory Permissions</li>
+<li>Viewing File and Directory Permissions/Ownership's</li>
+<li>Changing the Permissions/Ownership's</li>
+<li>Modifying Default Permissions/Ownership's</li>
+<li>File Descriptors (Important)</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Y_s81g2sKR8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1><a class="header" href="#day4--working-with-files-and-directories-" id="day4--working-with-files-and-directories-">Day4 ( Working with Files and Directories )</a></h1>
+<p>We continued our file-system exploration journey by looking at some commands. Also most importantly the file descriptors!</p>
+<p>File Descriptors are very important to understand, they are widely used in <strong>Shell scripts</strong>!</p>
+<h2><a class="header" href="#agenda-for-day4" id="agenda-for-day4">Agenda for Day4</a></h2>
+<ul>
+<li>Determining Where you are in the Directory Structure
+<ul>
+<li>pwd (print name of current/working directory)</li>
+</ul>
+</li>
+<li>Viewing File Content ( Revisited )
+<ul>
+<li>cat (concatenate files and print on the standard output)</li>
+</ul>
+</li>
+<li>Copying Files and Directories
+<ul>
+<li>cp (copy files and directories)</li>
+</ul>
+</li>
+<li>Searching Files and Directories
+<ul>
+<li>find (search for files in a directory hierarchy)</li>
+<li>locate (find files by name)</li>
+</ul>
+</li>
+<li>Creating and Removing Files and Directories
+<ul>
+<li>touch (change file timestamps, create blank files)</li>
+<li>vi (Vi Improved, a programmer's text editor)</li>
+<li>nano (Nano's ANOther editor, an enhanced free Pico clone)</li>
+</ul>
+</li>
+<li>The Standard Files</li>
+<li>File Descriptors ( 0, 1, 2 ) ( Revisited )</li>
+<li>Input Redirection</li>
+<li>Output Redirection</li>
+<li>Combined Redirection</li>
+<li>Pipes ( | )</li>
+</ul>
+<p><a href="command_common.html">cat, cp, sort, tee</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vwYvdd5thNI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1><a class="header" href="#day5--filters-and-commands-" id="day5--filters-and-commands-">Day5 ( Filters and Commands )</a></h1>
+<p>Filters make it easy to query data in files and make necessary changes. In this module, we covered some important filters used in Linux.</p>
+<h2><a class="header" href="#agenda-for-day5" id="agenda-for-day5">Agenda for Day5</a></h2>
+<ul>
+<li>find</li>
+<li>Using find</li>
+<li>Executing Commands with find ( -exec )</li>
+<li>find Examples</li>
+<li>locate</li>
+<li>locate options / locate examples / updatedb</li>
+<li>tr / wc</li>
+<li>grep</li>
+<li>Basic grep</li>
+<li>grep Examples</li>
+<li>grep Options ( -A, -B, -C, -l, -r, -i )</li>
+<li>sed</li>
+<li>sort command &amp; examples</li>
+<li>head and tail commands</li>
+<li>tee command</li>
+<li>/dev/tty and /dev/null special files</li>
+<li>wall command</li>
+</ul>
+<p><a href="command_find.html">find command</a></p>
+<p><a href="command_sed.html">sed command</a></p>
+<p><a href="command_grep.html">grep command</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_TaTAUeR4uY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1><a class="header" href="#day6--using-vi-editor-" id="day6--using-vi-editor-">Day6 ( Using vi editor )</a></h1>
+<p><strong>vi editor</strong> is the most widely used editor on Linux operating system, however you will need to invest subsequent amount of time to make yourself familiar with it. In this module we covered some ground on vi editor.</p>
+<h2><a class="header" href="#agenda-for-day6" id="agenda-for-day6">Agenda for Day6</a></h2>
+<ul>
+<li>Introducing the vi editor</li>
+<li>The vi editor and its modes</li>
+<li>Editing with vi</li>
+<li>Moving the Cursor</li>
+<li>Editing, Copying and Moving Text</li>
+<li>Pattern Searching</li>
+<li>Repeating the Last Editor Command</li>
+<li>Undoing Commands</li>
+<li>Using the Shell from inside vi editor</li>
+</ul>
+<p><a href="vim.html">Vi Editor</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c3OtJ6T3E94" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1><a class="header" href="#day7--process-control--user-management-" id="day7--process-control--user-management-">Day7 ( Process Control &amp; User Management )</a></h1>
+<p>Process management and User administration is very important aspect on a multi-user operating system like Linux. We covered some important commands that help you work on these aspects.</p>
+<h2><a class="header" href="#agenda-for-day7" id="agenda-for-day7">Agenda for Day7</a></h2>
+<ul>
+<li>
+<p>Performing basic Process Control</p>
+<ul>
+<li>System Processes Overview</li>
+<li>View a process ( ps )</li>
+<li>Search for a specific process ( pgrep )</li>
+<li>Send a signal to a process  ( pkill )</li>
+<li>Terminating processes with the kill command ( kill )</li>
+</ul>
+</li>
+<li>
+<p>User Administration / Management</p>
+<ul>
+<li>Describing the Fundamentals of User Administration</li>
+<li>Managing User Accounts – Addition, Modification, and password reset of User Accounts</li>
+<li>Managing Initialization Files ( .bashrc, .bash_profile, .bash_history )</li>
+</ul>
+</li>
+</ul>
+<p><a href="user_management_cheatsheet.html">User Management</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nzkXcRC93Sk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1><a class="header" href="#day8--package-management--system-performance-monitoring-" id="day8--package-management--system-performance-monitoring-">Day8 ( Package Management &amp; System Performance Monitoring )</a></h1>
+<p>When working on any OS you will tend to install some applications. Every OS has its own way of installing application and so do Linux. We will cover some ways of installing packages on a Cent-OS &amp; Ubuntu Operating System.</p>
+<h2><a class="header" href="#agenda-for-day8" id="agenda-for-day8">Agenda for Day8</a></h2>
+<ul>
+<li>
+<p>Package Management</p>
+<ul>
+<li>Package Management in Linux</li>
+<li>RPM, YUM, APT, DPKG</li>
+</ul>
+</li>
+<li>
+<p>System Performance Monitoring</p>
+<ul>
+<li>Process Management and Performance Monitoring</li>
+<li>Viewing System process ( top , ps )</li>
+<li>Monitor System Performance Statistics</li>
+<li>Monitoring CPU, Memory, Swap space, Disk I/O</li>
+<li>Working with vmstat , iostat and SAR command</li>
+</ul>
+</li>
+</ul>
+<p><a href="ubuntu-packagemangers.html">Ubuntu Package Managers</a></p>
+<p><a href="centos_yum.html">Redhat Package Manager - YUM</a></p>
+<p><a href="centos_rpm.html">Redhat Package Manager - RPM</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_AXqc7FLeyk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1><a class="header" href="#day9--network-management--performing-remote-connections-and-file-transfers-" id="day9--network-management--performing-remote-connections-and-file-transfers-">Day9 ( Network Management &amp; Performing Remote Connections and File Transfers )</a></h1>
+<p>I like to call Linux as a network based operating system. It is very efficiently used as high performance network based system. In this module we will cover some ways of inspecting network on a Linux system &amp; perform some remote connection transfers.</p>
+<h2><a class="header" href="#agenda-for-day9" id="agenda-for-day9">Agenda for Day9</a></h2>
+<ul>
+<li>
+<p>Network Management</p>
+<ul>
+<li>Controlling and Monitoring Network Interfaces</li>
+<li>Checking Available and In-use network interfaces</li>
+<li>Checking Running ports and services</li>
+</ul>
+</li>
+<li>
+<p>Performing Remote Connections and File Transfers</p>
+<ul>
+<li>Establish a Remote login session – Telnet, SSH, SFTP, etc</li>
+<li>Copy files or directories to and from another system</li>
+<li>Transfer files between systems</li>
+</ul>
+</li>
+</ul>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IhZ-gQAciFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h1><a class="header" href="#cheatsheets" id="cheatsheets">Cheatsheets</a></h1>
+<p>For the convenience of running commands I have provided cheatsheets for the following.</p>
+<ol>
+<li>
+<p><a href="user_management_cheatsheet.html">User Management</a></p>
+</li>
+<li>
+<p><a href="ubuntu-packagemangers.html">Ubuntu Package Managers</a></p>
+</li>
+<li>
+<p><a href="centos_yum.html">Redhat Package Manager - YUM</a></p>
+</li>
+<li>
+<p><a href="vents_rpm.html">Redhat Package Manager - RPM</a></p>
+</li>
+<li>
+<p><a href="vim.html">Vi Editor</a></p>
+</li>
+<li>
+<p><a href="command_find.html">find command</a></p>
+</li>
+<li>
+<p><a href="command_sed.html">sed command</a></p>
+</li>
+<li>
+<p><a href="command_grep.html">grep command</a></p>
+</li>
+<li>
+<p><a href="command_common.html">common commands</a></p>
+</li>
+</ol>
+<br>
+<br>
+<br>
+<div align="center">Made with <img src="https://image.flaticon.com/icons/svg/860/860906.svg" width="40" height="40" title="I love balloons!"> by <a href="https://about.me/amaankhan4u" target="_blank">Amaan</a></div>
+<h1><a class="header" href="#user-management" id="user-management">User Management</a></h1>
+<h3><a class="header" href="#add-users" id="add-users">Add Users</a></h3>
+<p>Create A User (Called &quot;ashley&quot;)</p>
+<pre><code class="language-bash">useradd --create-home ashley
+</code></pre>
+<p>Create A User In Groups &quot;users&quot; And &quot;dev&quot;</p>
+<pre><code class="language-bash">useradd --create-home --groups users dev ashley
+</code></pre>
+<p>Create A User With The Uid 1337</p>
+<pre><code class="language-bash">useradd --create-home --uid 1337 ashley
+</code></pre>
+<p>Create Or Change A User Password</p>
+<pre><code class="language-bash">passwd ashley
+</code></pre>
+<p>Add User To A Group (&quot;coder&quot;)</p>
+<pre><code class="language-bash">usermod --append --groups coder ashley
+</code></pre>
+<h3><a class="header" href="#permissions" id="permissions">Permissions</a></h3>
+<p>Set Default Permission Of Files To 644</p>
+<pre><code class="language-bash">echo &quot;masc 022&quot; &gt;&gt; /etc/profile
+</code></pre>
+<p>Set Default Permission Of Files To 664</p>
+<pre><code class="language-bash">echo &quot;umask 002&quot; &gt;&gt; /etc/profile
+</code></pre>
+<p>Change Ownership Of A File (&quot;example.txt&quot;) To User (&quot;ashley&quot;)</p>
+<pre><code class="language-bash">chown ashley:users example.txt
+</code></pre>
+<p>Give Read Permission To User, Group, And Others</p>
+<pre><code class="language-bash">chmod ugo+r example.txt
+</code></pre>
+<p>Give Write Permission To User And Group</p>
+<pre><code class="language-bash">chmod ug+w example.txt
+</code></pre>
+<p>Remove Write Permission To A File For Group Members</p>
+<pre><code class="language-bash">chmod g-w example.txt
+</code></pre>
+<p>Make A File Executable</p>
+<pre><code class="language-bash">chmod +x example.txt
+</code></pre>
+<p>Log In As A Different User</p>
+<pre><code class="language-bash">su - ashley
+</code></pre>
+<p>Run A Command (&quot;ls&quot;) As A Different User</p>
+<pre><code class="language-bash">su - ashley --command ls
+</code></pre>
+<h3><a class="header" href="#delete-users" id="delete-users">Delete Users</a></h3>
+<p>Remove A User From A Group (&quot;coder&quot;)</p>
+<pre><code class="language-bash">gpasswd --delete ashley coder
+</code></pre>
+<p>Delete A User From The System</p>
+<pre><code class="language-bash">userdel ashley
+</code></pre>
+<p>Delete A User And All User Data From The System</p>
+<pre><code class="language-bash">userdel --remove ashley
+</code></pre>
+<h3><a class="header" href="#history" id="history">History</a></h3>
+<p>Show Which Users Are Currently Logged In</p>
+<pre><code class="language-bash">w
+</code></pre>
+<p>Show Login History</p>
+<pre><code class="language-bash">last
+</code></pre>
+<p>﻿</p>
+<h1><a class="header" href="#package-managers-of-ubuntu" id="package-managers-of-ubuntu">Package Managers of Ubuntu</a></h1>
+<p>apt, apt-get and dpkg are Package manager's of Ubuntu Linux.</p>
+<h3><a class="header" href="#to-check-the-list-of-packages-available-in-the-repositories" id="to-check-the-list-of-packages-available-in-the-repositories">To check the list of packages available in the repositories</a></h3>
+<pre><code class="language-bash">  apt list | grep package-name
+  apt-cache pkgnames | grep package-name
+  apt-cache search package-name
+  apt-file search/find package-name
+</code></pre>
+<h3><a class="header" href="#to-list-the-installed-packages-of-the-system" id="to-list-the-installed-packages-of-the-system">To list the installed packages of the system</a></h3>
+<pre><code class="language-bash">  apt list --installed | grep package-name
+  dpk --get-selections
+</code></pre>
+<p>Also you can evaluate the <code>/var/log/apt/history.log</code> file for looking at the history of packages installed.</p>
+<h3><a class="header" href="#to-get-the-list-of-files-installed-from-a-particular-package" id="to-get-the-list-of-files-installed-from-a-particular-package">To get the list of files installed from a particular package</a></h3>
+<pre><code class="language-bash">  apt-file list package-name | grep conf$
+  dpkg-query -L package-name | grep filename
+</code></pre>
+<h3><a class="header" href="#to-update-the-packages-available-in-the-system" id="to-update-the-packages-available-in-the-system">To update the packages available in the system</a></h3>
+<pre><code class="language-bash">  apt-get update
+  apt update
+</code></pre>
+<h3><a class="header" href="#to-upgrade-the-packages-in-the-system" id="to-upgrade-the-packages-in-the-system">To upgrade the packages in the system</a></h3>
+<pre><code class="language-bash">  apt-get upgrade
+  apt upgrade
+</code></pre>
+<h3><a class="header" href="#to-hold-a-package-for-the-upgradeupdate" id="to-hold-a-package-for-the-upgradeupdate">To hold a package for the upgrade/update</a></h3>
+<pre><code class="language-bash">  apt-mark hold package-name
+  echo &quot;package-name    hold&quot; | dpkg --set-selections
+</code></pre>
+<h3><a class="header" href="#to-get-the-details-of-the-packages-kept-on-hold" id="to-get-the-details-of-the-packages-kept-on-hold">To get the details of the packages kept on hold</a></h3>
+<pre><code class="language-bash">  apt-mark showhold
+  dpkg --get-selections | grep hold
+</code></pre>
+<h3><a class="header" href="#to-unhold-the-package-for-the-system-update" id="to-unhold-the-package-for-the-system-update">To unhold the package for the system update</a></h3>
+<pre><code class="language-bash">  apt-mark unhold
+  echo &quot;package-name   install&quot; | dpkg --set-selections
+</code></pre>
+<h3><a class="header" href="#to-list-the-packages-installed-automatically-or-manually" id="to-list-the-packages-installed-automatically-or-manually">To list the packages installed automatically or manually</a></h3>
+<pre><code class="language-bash">  apt-mark showauto
+  apt-mark showmanual
+</code></pre>
+<h3><a class="header" href="#to-see-the-list-of-up-gradable-packages-in-the-system" id="to-see-the-list-of-up-gradable-packages-in-the-system">To see the list of up-gradable packages in the system</a></h3>
+<pre><code class="language-bash">  apt list --upgradable
+  apt-get upgrade --dry-run
+</code></pre>
+<h3><a class="header" href="#to-remove-the-packages-automatically-from-the-system-that-are-not-needed-anymore" id="to-remove-the-packages-automatically-from-the-system-that-are-not-needed-anymore">To remove the packages automatically from the system that are not needed anymore</a></h3>
+<pre><code class="language-bash">  apt autoremove
+  apt-get autoremove - Remove automatically all unused packages
+  apt-get autoclean  - Erase old downloaded archive files
+  apt-get clean      - Erase downloaded archive files
+</code></pre>
+<h3><a class="header" href="#to-see-the-list-of-sources-of-repositories-configured" id="to-see-the-list-of-sources-of-repositories-configured">To see the list of sources of repositories configured</a></h3>
+<pre><code class="language-bash">  apt edit-sources	-- sources file /etc/apt/sources.list.
+</code></pre>
+<h3><a class="header" href="#this-gives-you-information-of-all-available-package-versions" id="this-gives-you-information-of-all-available-package-versions">This gives you information of all available package versions</a></h3>
+<pre><code class="language-bash">  apt-cache policy &lt;packageName&gt;
+</code></pre>
+<h3><a class="header" href="#to-install-a-package-in-the-system" id="to-install-a-package-in-the-system">To install a package in the system</a></h3>
+<pre><code class="language-bash">  apt install package-name
+  apt-get install package-name
+  dpkg -i package-name.deb
+</code></pre>
+<h3><a class="header" href="#to-erase-the-package-from-the-system" id="to-erase-the-package-from-the-system">To erase the package from the system</a></h3>
+<pre><code class="language-bash">  apt remove package-name
+  apt-get remove package-name  - Remove the package
+  apt-get purge package-name   - Remove the package/configuration files
+</code></pre>
+<h3><a class="header" href="#to-go-for-the-distribution-update" id="to-go-for-the-distribution-update">To go for the distribution update</a></h3>
+<pre><code class="language-bash">  apt-get dist-upgrade
+  do-release-upgrade
+</code></pre>
+<h3><a class="header" href="#to-check-the-package-for-broken-dependencies" id="to-check-the-package-for-broken-dependencies">To check the package for broken dependencies</a></h3>
+<pre><code class="language-bash">  apt-get check package-name
+</code></pre>
+<h3><a class="header" href="#apt-add-repository-is-a-script-for-adding-apt-sourceslist-entries" id="apt-add-repository-is-a-script-for-adding-apt-sourceslist-entries"><code>apt-add-repository</code> is a script for adding apt sources.list entries</a></h3>
+<p><code>apt-add-repository &lt;source-line&gt;</code> - The apt repository source line to add. This is one of:</p>
+<ul>
+<li>a complete apt line in quotes,</li>
+<li>a repo url and areas in quotes (areas defaults to'main')</li>
+<li>a PPA shortcut.</li>
+<li>a distro component</li>
+</ul>
+<h3><a class="header" href="#to-get-the-changelog-information-of-some-package-so-we-can-check-for-the-vulnerability-updates-viz-cve" id="to-get-the-changelog-information-of-some-package-so-we-can-check-for-the-vulnerability-updates-viz-cve">To get the changelog information of some package (so we can check for the vulnerability updates viz: CVE)</a></h3>
+<pre><code class="language-bash">apt-get changelog package-name | grep -i cve
+rpm -q --changelog package-name   - Incase of rpm based distro
+aptitude changelog package-name   - Incase of the aptitude pkg manager.
+</code></pre>
+<h1><a class="header" href="#redhat-package-manager--yum-" id="redhat-package-manager--yum-">Redhat Package Manager ( YUM )</a></h1>
+<p><code>yum</code> is the package manager for Redhat based system.</p>
+<p>Help display yum commands and options</p>
+<pre><code>yum help
+</code></pre>
+<h3><a class="header" href="#individual-packages" id="individual-packages">Individual packages</a></h3>
+<p>List package names from repositories</p>
+<pre><code>yum list available
+</code></pre>
+<p>List all available packages</p>
+<pre><code>yum list installed
+</code></pre>
+<p>List all installed packages</p>
+<pre><code>yum list all
+</code></pre>
+<p>List installed and available packages</p>
+<pre><code>yum list kernel
+</code></pre>
+<p>List info about vsftpd package</p>
+<pre><code>yum info vsftpd
+</code></pre>
+<p>Display dependencies for a package (deplist)</p>
+<pre><code>yum deplist nfs-utils
+</code></pre>
+<h3><a class="header" href="#find-packages-that-provide-the-queried-file" id="find-packages-that-provide-the-queried-file">Find packages that provide the queried file</a></h3>
+<p>Show package that contains top command</p>
+<pre><code>yum provides “*bin/top”
+</code></pre>
+<p>Show package containing README.top file</p>
+<pre><code>yum provides “*/README.top”
+</code></pre>
+<h3><a class="header" href="#search-package-names-and-descriptions-for-a-term" id="search-package-names-and-descriptions-for-a-term">Search package names and descriptions for a term</a></h3>
+<p>Find packages with samba in name or description</p>
+<pre><code>yum search samba
+</code></pre>
+<p>Get information about available package updates</p>
+<pre><code>yum updateinfo security
+</code></pre>
+<h3><a class="header" href="#groups-of-packages" id="groups-of-packages">Groups of packages</a></h3>
+<p>Display description and contents of a package group</p>
+<pre><code>yum groupinfo “Web Server”
+</code></pre>
+<h3><a class="header" href="#manage-yum-repositories" id="manage-yum-repositories">Manage Yum Repositories</a></h3>
+<p>Display information about enabled yum repositories</p>
+<pre><code>yum repoinfo rhel-7-server-rpms
+</code></pre>
+<p>See info on rhel-7-server-rpms repo</p>
+<pre><code>yum repo-pkgs my-rpms list
+</code></pre>
+<p>List packages from my-rpms repo</p>
+<pre><code>yum repo-pkgs my-rpms install
+</code></pre>
+<p>Remove all packages from my-rpms repo</p>
+<pre><code>yum repo-pkgs my-rpms remove
+</code></pre>
+<h3><a class="header" href="#troubleshoot-and-maintain-yum" id="troubleshoot-and-maintain-yum">Troubleshoot And Maintain Yum</a></h3>
+<p>List all yum install, update and erase actions</p>
+<pre><code>yum history list
+</code></pre>
+<p>Show details of yum transaction 3</p>
+<pre><code>yum history info 3
+</code></pre>
+<p>Undo the yum action from transaction 3</p>
+<pre><code>yum history undo 3
+</code></pre>
+<p>Clear out cached package data</p>
+<pre><code>yum clean packages
+</code></pre>
+<p>Clean out all packages and meta data from cache</p>
+<pre><code>yum clean all
+</code></pre>
+<h3><a class="header" href="#install-remove-and-upgrade-packages-with-yum" id="install-remove-and-upgrade-packages-with-yum">Install, Remove And Upgrade Packages With Yum</a></h3>
+<p>Install the vsftpd package</p>
+<pre><code>yum install vsftpd
+</code></pre>
+<p>Update one or all packages on your system</p>
+<pre><code>yum update
+</code></pre>
+<p>Update the httpd package (if available)</p>
+<pre><code>yum update httpd
+</code></pre>
+<p>Apply security-related package updates</p>
+<pre><code>yum update --security
+</code></pre>
+<p>Reinstall the current version of a package</p>
+<pre><code>yum reinstall util-linux
+</code></pre>
+<p>Downgrade a package to an earlier version</p>
+<pre><code>yum downgrade abc
+</code></pre>
+<p>Install abc package from local directory</p>
+<pre><code>yum localinstall http://myrepo/abc-1-1.i686.rpm
+</code></pre>
+<p>Remove the vsftpd package and dependencies</p>
+<pre><code>yum remove vsftpd
+</code></pre>
+<p>autoremove Same as erase, plus removes additional unneeded packages *</p>
+<pre><code>yum autoremove httpd
+</code></pre>
+<h3><a class="header" href="#popular-options-for-different-yum-commands" id="popular-options-for-different-yum-commands">Popular Options For Different Yum Commands</a></h3>
+<p>Option Description</p>
+<pre><code>-y                               - Assume yes if prompted
+--assumeno                       - Assume no if prompted
+-q                               - Produce no output
+-v                               - Produce extra debugging output
+--noplugins                      - Run command without loading any yum plugins
+--disableplugin                  - Disable a particular plugin for single command
+--enableplugin                   - Enable a plugin that is installed, but currently disabled
+--changelog                      - Display changelog information of package
+--enablerepo                     - Enable currently disabled repo for a single command (wildcards okay)
+
+yum install docker --enablerepo=rhel-7-server-extras-rpm
+
+--disablerepo                    - Disable currently enabled repo for a single command (wildcards okay)
+
+yum list available --disablerepo=epel
+
+--downloadonly                   - Download to /var/cache/yum/ arch / prod / repo / packages/, but don’t install
+
+Download vsftpd package to cache
+yum install --downloadonly vsftpd
+
+</code></pre>
+<h3><a class="header" href="#more-yum-related-commands-install-the-yum-utils-package" id="more-yum-related-commands-install-the-yum-utils-package">More Yum-Related Commands (install the yum-utils package)</a></h3>
+<p>Command Description</p>
+<pre><code>find-repos-of-install               - Find which repository a package comes from
+needs-restarting                    - Find processes that have been updated and need to restart
+repoquery --requires --resolve bash - Show dependent packages
+reposync                            - Synchronize yum repositories to a local directory
+repotrack                           - Download a package and all its dependencies
+show-installed                      - List installed RPM packages and statistics
+verifytree                          - Check the local yum repository for consistency
+yum-complete-transaction            - Try to complete yum transactions that didn’t finish
+yumdb                               - Check or change the yum database
+yumdownloader                       - Download a package from a repo to current directory
+</code></pre>
+<h2><a class="header" href="#redhat-package-manager--rpm-" id="redhat-package-manager--rpm-">Redhat Package Manager ( rpm )</a></h2>
+<p><code>rpm</code> is a powerful Package Manager for Red Hat, Suse and Fedora Linux. It can be
+used to build, install, query, verify, update, and remove/erase individual software
+packages. A Package consists of an archive of files, and package information,
+including name, version, and description:</p>
+<p>Syntax Description Example(s)</p>
+<h3><a class="header" href="#install-the-package" id="install-the-package">Install the package</a></h3>
+<pre><code class="language-bash">rpm -ivh {rpm-file}
+rpm -ivh mozilla-mail-1.7.5-17.i586.rpm
+rpm -ivh --test mozilla-mail-1.7.5-17.i586.rpm
+</code></pre>
+<h3><a class="header" href="#upgrade-package" id="upgrade-package">Upgrade package</a></h3>
+<pre><code class="language-bash">rpm -Uvh {rpm-file}
+rpm -Uvh mozilla-mail-1.7.6-12.i586.rpm
+rpm -Uvh --test mozilla-mail-1.7.6-12.i586.rpm
+</code></pre>
+<h3><a class="header" href="#eraseremove-an-installed-package" id="eraseremove-an-installed-package">Erase/remove/ an installed package</a></h3>
+<pre><code class="language-bash">rpm -ev {package}
+rpm -ev mozilla-mail
+</code></pre>
+<h3><a class="header" href="#eraseremove-an-installed-package-without-checking-for-dependencies" id="eraseremove-an-installed-package-without-checking-for-dependencies">Erase/remove/ an installed package without checking for dependencies</a></h3>
+<pre><code class="language-bash">rpm -ev --nodeps {package}
+rpm -ev --nodeps mozilla-mail
+</code></pre>
+<h3><a class="header" href="#display-list-all-installed-packages" id="display-list-all-installed-packages">Display list all installed packages</a></h3>
+<pre><code class="language-bash">rpm -qa
+rpm -qa
+rpm -qa | less
+</code></pre>
+<h3><a class="header" href="#display-installed-information-along-with-package-version-and-short-description" id="display-installed-information-along-with-package-version-and-short-description">Display installed information along with package version and short description</a></h3>
+<pre><code class="language-bash">rpm -qi {package}
+rpm -qi mozilla-mail
+</code></pre>
+<h3><a class="header" href="#find-out-what-package-a-file-belongs-to-ie-find-what-package-owns-the-file" id="find-out-what-package-a-file-belongs-to-ie-find-what-package-owns-the-file">Find out what package a file belongs to i.e. find what package owns the file</a></h3>
+<pre><code class="language-bash">rpm -qf {/path/to/file}
+rpm -qf /etc/passwd
+rpm -qf /bin/bash
+</code></pre>
+<h3><a class="header" href="#display-list-of-configuration-files-for-a-package" id="display-list-of-configuration-files-for-a-package">Display list of configuration file(s) for a package</a></h3>
+<pre><code class="language-bash">rpm -qc {pacakge-name}
+rpm -qc httpd
+</code></pre>
+<h3><a class="header" href="#display-list-of-configuration-files-for-a-command" id="display-list-of-configuration-files-for-a-command">Display list of configuration files for a command</a></h3>
+<pre><code class="language-bash">rpm -qcf {/path/to/file}
+rpm -qcf /usr/X11R6/bin/xeyes
+</code></pre>
+<h3><a class="header" href="#display-list-of-all-recently-installed-rpms" id="display-list-of-all-recently-installed-rpms">Display list of all recently installed RPMs</a></h3>
+<pre><code class="language-bash">rpm -qa --last
+rpm -qa --last
+rpm -qa --last | less
+</code></pre>
+<h3><a class="header" href="#find-out-what-dependencies-a-rpm-file-has" id="find-out-what-dependencies-a-rpm-file-has">Find out what dependencies a rpm file has</a></h3>
+<pre><code class="language-bash">rpm -qpR {.rpm-file}
+rpm -qR {package}
+rpm -qpR mediawiki-1.4rc1-4.i586.rpm
+rpm -qR bash
+</code></pre>
+<h1><a class="header" href="#vi-editor" id="vi-editor">Vi Editor</a></h1>
+<h3><a class="header" href="#file-management" id="file-management">File management</a></h3>
+<pre><code class="language-bash">:e              reload file
+:q              quit
+:q!             quit without saving changes
+:w              write file
+:w {file}       write new file
+:x              write file and exit
+</code></pre>
+<h3><a class="header" href="#movement" id="movement">Movement</a></h3>
+<pre><code class="language-bash">    k
+  h   l         basic motion
+    j
+</code></pre>
+<pre><code class="language-bash">w               next start of word
+W               next start of whitespace-delimited word
+e               next end of word
+E               next end of whitespace-delimited word
+b               previous start of word
+B               previous start of whitespace-delimited word
+0               start of line
+$               end of line
+gg              go to first line in file
+G               go to end of file
+gk		move down one displayed line
+gj		move up one displayed line
+</code></pre>
+<h3><a class="header" href="#insertion" id="insertion">Insertion</a></h3>
+<p>To exit from insert mode use Esc or Ctrl-C. Enter insertion mode and:</p>
+<pre><code class="language-bash">a               append after the cursor
+A               append at the end of the line
+i               insert before the cursor
+I               insert at the beginning of the line
+o               create a new line under the cursor
+O               create a new line above the cursor
+R               enter insert mode but replace instead of inserting chars
+:r {file}       insert from file
+</code></pre>
+<h3><a class="header" href="#editing" id="editing">Editing</a></h3>
+<pre><code class="language-bash">u               undo
+yy              yank (copy) a line
+y{motion}       yank text that {motion} moves over
+p               paste after cursor
+P               paste before cursor
+&lt;Del&gt; or x      delete a character
+dd              delete a line
+d{motion}       delete text that {motion} moves over
+</code></pre>
+<h3><a class="header" href="#search-and-replace-with-the-substitute-aka-s-command" id="search-and-replace-with-the-substitute-aka-s-command">Search and replace with the <code>:substitute</code> (aka <code>:s</code>) command</a></h3>
+<pre><code class="language-bash">:s/foo/bar/	    replace the first match of 'foo' with 'bar' on the current line only
+:s/foo/bar/g	replace all matches (`g` flag) of 'foo' with 'bar' on the current line only
+:%s/foo/bar/g	replace all matches of 'foo' with 'bar' in the entire file (`:%s`)
+:%s/foo/bar/gc	ask to manually confirm (`c` flag) each replacement
+</code></pre>
+<h3><a class="header" href="#preceding-a-motion-or-edition-with-a-number-repeats-it-n-times" id="preceding-a-motion-or-edition-with-a-number-repeats-it-n-times">Preceding a motion or edition with a number repeats it 'n' times</a></h3>
+<p>Examples:</p>
+<pre><code class="language-bash">50k         moves 50 lines up
+2dw         deletes 2 words
+5yy         copies 5 lines
+42G         go to line 42
+</code></pre>
+<h3><a class="header" href="#multiple-windows" id="multiple-windows">Multiple windows</a></h3>
+<pre><code class="language-bash">:e filename      - edit another file
+:split filename  - split window and load another file
+ctrl-w up arrow  - move cursor up a window
+ctrl-w ctrl-w    - move cursor to another window (cycle)
+ctrl-w_          - maximize current window
+ctrl-w=          - make all equal size
+10 ctrl-w+       - increase window size by 10 lines
+:vsplit file     - vertical split
+:sview file      - same as split, but readonly
+:hide            - close current window
+:only            - keep only this window open
+:ls              - show current buffers
+:b 2             - open buffer #2 in this window
+</code></pre>
+<h1><a class="header" href="#find-command" id="find-command">Find Command</a></h1>
+<h3><a class="header" href="#to-find-files-by-case-insensitive-extension-ex-jpg-jpg-jpg" id="to-find-files-by-case-insensitive-extension-ex-jpg-jpg-jpg">To find files by case-insensitive extension (ex: .jpg, .JPG, .jpG)</a></h3>
+<pre><code class="language-bash">find . -iname &quot;*.jpg&quot;
+</code></pre>
+<h3><a class="header" href="#to-find-directories" id="to-find-directories">To find directories</a></h3>
+<pre><code class="language-bash">find . -type d
+</code></pre>
+<h3><a class="header" href="#to-find-files" id="to-find-files">To find files</a></h3>
+<pre><code class="language-bash">find . -type f
+</code></pre>
+<h3><a class="header" href="#to-find-files-by-octal-permission" id="to-find-files-by-octal-permission">To find files by octal permission</a></h3>
+<pre><code class="language-bash">find . -type f -perm 777
+</code></pre>
+<h3><a class="header" href="#to-find-files-with-setuid-bit-set" id="to-find-files-with-setuid-bit-set">To find files with setuid bit set</a></h3>
+<pre><code class="language-bash">find . -xdev \( -perm -4000 \) -type f -print0 | xargs -0 ls -l
+</code></pre>
+<h3><a class="header" href="#to-find-files-with-extension-txt-and-remove-them" id="to-find-files-with-extension-txt-and-remove-them">To find files with extension <code>'.txt'</code> and remove them</a></h3>
+<pre><code class="language-bash">find ./path/ -name '*.txt' -exec rm '{}' \;
+</code></pre>
+<h3><a class="header" href="#to-find-files-with-extension-txt-and-look-for-a-string-into-them" id="to-find-files-with-extension-txt-and-look-for-a-string-into-them">To find files with extension <code>'.txt'</code> and look for a string into them</a></h3>
+<pre><code class="language-bash">find ./path/ -name '*.txt' | xargs grep 'string'
+</code></pre>
+<h3><a class="header" href="#to-find-files-with-size-bigger-than-5-mebibyte-and-sort-them-by-size" id="to-find-files-with-size-bigger-than-5-mebibyte-and-sort-them-by-size">To find files with size bigger than 5 Mebibyte and sort them by size</a></h3>
+<pre><code class="language-bash">find . -size +5M -type f -print0 | xargs -0 ls -Ssh | sort -z
+</code></pre>
+<h3><a class="header" href="#to-find-files-bigger-than-2-megabyte-and-list-them" id="to-find-files-bigger-than-2-megabyte-and-list-them">To find files bigger than 2 Megabyte and list them</a></h3>
+<pre><code class="language-bash">find . -type f -size +200000000c -exec ls -lh {} \; | awk '{ print $9 &quot;: &quot; $5 }'
+</code></pre>
+<h3><a class="header" href="#to-find-files-modified-more-than-7-days-ago-and-list-file-information" id="to-find-files-modified-more-than-7-days-ago-and-list-file-information">To find files modified more than 7 days ago and list file information</a></h3>
+<pre><code class="language-bash">find . -type f -mtime +7d -ls
+</code></pre>
+<h3><a class="header" href="#to-find-symlinks-owned-by-a-user-and-list-file-information" id="to-find-symlinks-owned-by-a-user-and-list-file-information">To find symlinks owned by a user and list file information</a></h3>
+<pre><code class="language-bash">find . -type l -user &lt;username-or-userid&gt; -ls
+</code></pre>
+<h3><a class="header" href="#to-search-for-and-delete-empty-directories" id="to-search-for-and-delete-empty-directories">To search for and delete empty directories</a></h3>
+<pre><code class="language-bash">find . -type d -empty -exec rmdir {} \;
+</code></pre>
+<h3><a class="header" href="#to-search-for-directories-named-build-at-a-max-depth-of-2-directories" id="to-search-for-directories-named-build-at-a-max-depth-of-2-directories">To search for directories named build at a max depth of 2 directories</a></h3>
+<pre><code class="language-bash">find . -maxdepth 2 -name build -type d
+</code></pre>
+<h3><a class="header" href="#to-search-all-files-who-are-not-in-git-directory" id="to-search-all-files-who-are-not-in-git-directory">To search all files who are not in <code>.git</code> directory</a></h3>
+<pre><code class="language-bash">find . ! -iwholename '*.git*' -type f
+</code></pre>
+<h3><a class="header" href="#to-find-all-files-that-have-the-same-node-hard-link-as-my_file_here" id="to-find-all-files-that-have-the-same-node-hard-link-as-my_file_here">To find all files that have the same node <code>(hard link) as MY_FILE_HERE</code></a></h3>
+<pre><code class="language-bash">find . -type f -samefile MY_FILE_HERE 2&gt;/dev/null
+</code></pre>
+<h3><a class="header" href="#to-find-all-files-in-the-current-directory-and-modify-their-permissions" id="to-find-all-files-in-the-current-directory-and-modify-their-permissions">To find all files in the current directory and modify their permissions</a></h3>
+<pre><code class="language-bash">find . -type f -exec chmod 644 {} \;
+</code></pre>
+<h1><a class="header" href="#sed-command" id="sed-command">sed command</a></h1>
+<h3><a class="header" href="#to-replace-all-occurrences-of-day-with-night-and-write-to-stdout" id="to-replace-all-occurrences-of-day-with-night-and-write-to-stdout">To replace all occurrences of &quot;day&quot; with &quot;night&quot; and write to stdout</a></h3>
+<pre><code class="language-bash">sed 's/day/night/g' &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-replace-all-occurrences-of-day-with-night-within-file" id="to-replace-all-occurrences-of-day-with-night-within-file">To replace all occurrences of &quot;day&quot; with &quot;night&quot; within <file></a></h3>
+<pre><code class="language-bash">sed -i 's/day/night/g' &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-replace-all-occurrences-of-day-with-night-on-stdin" id="to-replace-all-occurrences-of-day-with-night-on-stdin">To replace all occurrences of &quot;day&quot; with &quot;night&quot; on stdin</a></h3>
+<pre><code class="language-bash">echo 'It is daytime' | sed 's/day/night/g'
+</code></pre>
+<h3><a class="header" href="#to-remove-leading-spaces" id="to-remove-leading-spaces">To remove leading spaces</a></h3>
+<pre><code class="language-bash">sed -i -r 's/^\s+//g' &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-remove-empty-lines-and-print-results-to-stdout" id="to-remove-empty-lines-and-print-results-to-stdout">To remove empty lines and print results to stdout</a></h3>
+<pre><code class="language-bash">sed '/^$/d' &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-replace-newlines-in-multiple-lines" id="to-replace-newlines-in-multiple-lines">To replace newlines in multiple lines</a></h3>
+<pre><code class="language-bash">sed ':a;N;$!ba;s/\n//g' &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-insert-a-line-before-a-matching-pattern" id="to-insert-a-line-before-a-matching-pattern">To insert a line before a matching pattern</a></h3>
+<pre><code class="language-bash">sed '/Once upon a time/i\Chapter 1'
+</code></pre>
+<h3><a class="header" href="#to-add-a-line-after-a-matching-pattern" id="to-add-a-line-after-a-matching-pattern">To add a line after a matching pattern</a></h3>
+<pre><code class="language-bash">sed '/happily ever after/a\The end.'
+</code></pre>
+<h1><a class="header" href="#grep-command" id="grep-command">grep command</a></h1>
+<h3><a class="header" href="#to-search-a-file-for-a-pattern" id="to-search-a-file-for-a-pattern">To search a file for a pattern</a></h3>
+<pre><code class="language-bash">grep &lt;pattern&gt; &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-perform-a-case-insensitive-search-with-line-numbers" id="to-perform-a-case-insensitive-search-with-line-numbers">To perform a case-insensitive search (with line numbers)</a></h3>
+<pre><code class="language-bash">grep -in &lt;pattern&gt; &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-recursively-grep-for-string-pattern-in-dir" id="to-recursively-grep-for-string-pattern-in-dir">To recursively grep for <code>string &lt;pattern&gt; in &lt;dir&gt;</code></a></h3>
+<pre><code class="language-bash">grep -R &lt;pattern&gt; &lt;dir&gt;
+</code></pre>
+<h3><a class="header" href="#read-search-patterns-from-a-file-one-per-line" id="read-search-patterns-from-a-file-one-per-line">Read search patterns from a file (one per line)</a></h3>
+<pre><code class="language-bash">grep -f &lt;pattern-file&gt; &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#find-lines-not-containing-pattern" id="find-lines-not-containing-pattern">Find lines NOT containing pattern</a></h3>
+<pre><code class="language-bash">grep -v &lt;pattern&gt; &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-grep-with-regular-expressions" id="to-grep-with-regular-expressions">To grep with regular expressions</a></h3>
+<pre><code class="language-bash">grep &quot;^00&quot; &lt;file&gt;                                               # Match lines starting with 00
+grep -E &quot;[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}&quot; &lt;file&gt; # Find IP add
+</code></pre>
+<h3><a class="header" href="#to-find-all-files-that-match-pattern-in-dir" id="to-find-all-files-that-match-pattern-in-dir">To find all files that match <code>&lt;pattern&gt; in &lt;dir&gt;</code></a></h3>
+<pre><code class="language-bash">grep -rnw &lt;dir&gt; -e &lt;pattern&gt;
+</code></pre>
+<h3><a class="header" href="#to-exclude-grep-from-your-grepped-output-of-ps" id="to-exclude-grep-from-your-grepped-output-of-ps">To exclude grep from your grepped output of ps</a></h3>
+<p>(<code>Add [] to the first letter. Ex: sshd -&gt; [s]shd</code>)</p>
+<pre><code class="language-bash">ps aux | grep '[h]ttpd'
+</code></pre>
+<h3><a class="header" href="#colour-in-red-bash-and-keep-all-other-lines" id="colour-in-red-bash-and-keep-all-other-lines">Colour in red {bash} and keep all other lines</a></h3>
+<pre><code class="language-bash">ps aux | grep -E --color 'bash|$'
+</code></pre>
+<h1><a class="header" href="#cp-command" id="cp-command">cp command</a></h1>
+<h3><a class="header" href="#to-copy-a-file" id="to-copy-a-file">To copy a file</a></h3>
+<pre><code class="language-bash">cp ~/Desktop/foo.txt ~/Downloads/foo.txt
+</code></pre>
+<h3><a class="header" href="#to-copy-a-directory" id="to-copy-a-directory">To copy a directory</a></h3>
+<pre><code class="language-bash">cp -r ~/Desktop/cruise_pics/ ~/Pictures/
+</code></pre>
+<h3><a class="header" href="#to-create-a-copy-but-ask-to-overwrite-if-the-destination-file-already-exists" id="to-create-a-copy-but-ask-to-overwrite-if-the-destination-file-already-exists">To create a copy but ask to overwrite if the destination file already exists</a></h3>
+<pre><code class="language-bash">cp -i ~/Desktop/foo.txt ~/Documents/foo.txt
+</code></pre>
+<h3><a class="header" href="#to-create-a-backup-file-with-date" id="to-create-a-backup-file-with-date">To create a backup file with date</a></h3>
+<pre><code class="language-bash">cp foo.txt{,.&quot;$(date +%Y%m%d-%H%M%S)&quot;}
+</code></pre>
+<hr />
+<h1><a class="header" href="#cat-command" id="cat-command">cat command</a></h1>
+<h3><a class="header" href="#to-display-the-contents-of-a-file" id="to-display-the-contents-of-a-file">To display the contents of a file</a></h3>
+<pre><code class="language-bash">cat &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-display-file-contents-with-line-numbers" id="to-display-file-contents-with-line-numbers">To display file contents with line numbers</a></h3>
+<pre><code class="language-bash">cat -n &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-display-file-contents-with-line-numbers-blank-lines-excluded" id="to-display-file-contents-with-line-numbers-blank-lines-excluded">To display file contents with line numbers (blank lines excluded)</a></h3>
+<pre><code class="language-bash">cat -b &lt;file&gt;
+</code></pre>
+<hr />
+<h1><a class="header" href="#tee-command" id="tee-command">tee command</a></h1>
+<h3><a class="header" href="#to-tee-stdout-to-outfile" id="to-tee-stdout-to-outfile">To tee stdout to <outfile></a></h3>
+<pre><code class="language-bash">ls | tee &lt;outfile&gt;
+</code></pre>
+<h3><a class="header" href="#to-tee-stdout-and-append-to-outfile" id="to-tee-stdout-and-append-to-outfile">To tee stdout and append to <outfile></a></h3>
+<pre><code class="language-bash">ls | tee -a &lt;outfile&gt;
+</code></pre>
+<h3><a class="header" href="#to-tee-stdout-to-the-terminal-and-also-pipe-it-into-another-program-for-further-processing" id="to-tee-stdout-to-the-terminal-and-also-pipe-it-into-another-program-for-further-processing">To tee stdout to the terminal, and also pipe it into another program for further processing</a></h3>
+<pre><code class="language-bash">ls | tee /dev/tty | xargs printf &quot;\033[1;34m%s\033[m\n&quot;
+</code></pre>
+<hr />
+<h1><a class="header" href="#sort-command" id="sort-command">sort command</a></h1>
+<h3><a class="header" href="#to-sort-a-file" id="to-sort-a-file">To sort a file</a></h3>
+<pre><code class="language-bash">sort &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-sort-a-file-by-keeping-only-unique" id="to-sort-a-file-by-keeping-only-unique">To sort a file by keeping only unique</a></h3>
+<pre><code class="language-bash">sort -u &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-sort-a-file-and-reverse-the-result" id="to-sort-a-file-and-reverse-the-result">To sort a file and reverse the result</a></h3>
+<pre><code class="language-bash">sort -r &lt;file&gt;
+</code></pre>
+<h3><a class="header" href="#to-sort-a-file-randomly" id="to-sort-a-file-randomly">To sort a file randomly</a></h3>
+<pre><code class="language-bash">sort -R &lt;file&gt;
+</code></pre>
+<h1><a class="header" href="#qa" id="qa">Q&amp;A</a></h1>
+<p>If you have any questions, reach out to me over <a href="https://www.linkedin.com/in/amaan-khan-linux-ninja/" target="_blank">Linkedin</a>. Or alternatively you can paste your questions in this <a href="https://docs.google.com/spreadsheets/d/1ERDoadPTvbtlwl1F9aoP_K72vsv7kmHEp7mcNtG8-Sc/edit?usp=sharing" target="_blank" title="QnA Sheet">GoogleSheet</a>. I will answer your questions as time permits.</p>
+<p>Although, you may find answers from Google, but if want to understand with someone in-person then don't hesitate to contact me!</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div align="center">Made with <img src="https://image.flaticon.com/icons/svg/860/860906.svg" width="40" height="40" title="I love balloons!"> by <a href="https://about.me/amaankhan4u" target="_blank">Amaan</a></div>
+<h1><a class="header" href="#about-your-trainerimg-srchttpsimageflaticoncomiconssvg860860906svg-width40-height40-titlei-love-balloons" id="about-your-trainerimg-srchttpsimageflaticoncomiconssvg860860906svg-width40-height40-titlei-love-balloons">About your Trainer<img src="https://image.flaticon.com/icons/svg/860/860906.svg" width="40" height="40" title="I love balloons!"></a></h1>
+<p>Hi! I’m <a href="https://about.me/amaankhan4u" target="_blank">Amaan</a> and I spend a lot of my time in front of computers, phones and tablets trying to get my work done as efficiently as possible.
+I have spent a lot of time using Linux. It really is an obsession of mine as I think we live in the golden age of Open-Source Software's and Tools.</p>
+<p>I am always finding out how to do new things that make my work life a little easier and wanted a place to share what I have learned, for which I have created my <a href="https://linuxparrot.com" target="_blank" title="Checkout my blog">blog</a>. Feel free to connect with me for Contract &amp; Freelance projects, Linux queries, Interview tips or Just say a 'hi' maybe :)</p>
+<br>
+<br>
+<table class="social_table" style="border:none; border:0">
+<tbody>
+<tr style="border:none; border:0" align="center" valign="top">
+<td style="word-break: break-word; vertical-align: top; padding-bottom: 0; padding-right: 8px; padding-left: 8px; border: 0px;" valign="top"><a href="https://twitter.com/Amaankhan4you" target="_blank"><img width="38px" height="38px" src="https://openvisualfx.com/wp-content/uploads/2019/10/pnglot.com-twitter-bird-logo-png-139932.png" alt="Twitter" title="Visit me on Twitter" style="text-decoration: none;" border="0;"></a></td>
+<td style="word-break: break-word; vertical-align: top; padding-bottom: 0; padding-right: 8px; padding-left: 8px; border: 0px;" valign="top"><a href="https://linkedin.com/in/amaan-khan-linux-ninja" target="_blank"><img width="38px" height="38px" src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-linkedin-circle-512.png" alt="LinkedIn" title="Visit me on LinkedIn" style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: none; display: block;"></a></td>
+<td style="word-break: break-word; vertical-align: top; padding-bottom: 0; padding-right: 8px; padding-left: 8px; border: 0px;" valign="top"><a href="https://getpocket.com/@ej6g8d1dp2829A16a9Tf5d4T6bAMp3d8791rejDe86yem3bm4e14ex4fT4dluk29" target="_blank"><img width="38px" height="38px" src="https://cdn.worldvectorlogo.com/logos/pocket.svg" alt="Pocket" title="Visit me on Pocket" style="text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; border: none; display: block;"></a></td>
+</tr>
+</tbody>
+</table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+        
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+        
+        
+
+    </body>
+</html>
