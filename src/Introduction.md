@@ -7,7 +7,7 @@ Indeed during my college days **I used to hate programming**, it was difficult 
 
 <img src="https://global-uploads.webflow.com/5d71c5b5ed21579fe7c3535a/5e4b3d5264f7f54d7b331ac2_server-operating-system-market-share-2018.png" height="350"></img>
 
-I had planned to take free training on Linux in which I covered following aspects of the Linux OS. This training is intended for someone who is starting his journey or someone who already has some familiarity.
+I planned to take free training on Linux in which I covered following aspects of the Linux OS. This training is intended for someone who is starting his journey with Linux or someone who already has some familiarity.
 
 - [Introduction to Linux](Training_Day1.md)
 
