@@ -20,7 +20,7 @@ It was mostly an Introductory class of the workshop, however I had shared my mos
 - The Art of *Doing One Thing At a Time!*
 - Some Mind-Blowing Facts about Linux! 🤯
 - Overview of the Linux Operating System
-- [Linux Distributions](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
+- <a href="https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg" target="_blank">Linux Distributions</a>
 - Logging in to Linux system
 - Kernel
 
