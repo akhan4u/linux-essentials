@@ -15,13 +15,12 @@ Some details about the tech used
 
 |  Self Reviews 😬 | On Web 🌍 |
 | --------------------------|-----------------------------|
-| Useful for self learning  | https://linuxjourney.com  |
-| Best one liners for Linux command line  | https://www.commandlinefu.com/commands/browse  |
-| Find files in Linux from command line  | https://linuxize.com/post/how-to-find-files-in-linux-using-the-command-line  |
-| Improve your typing speed on the command line with this awesome tool!  | https://github.com/balzss/cli-typer  |
-| An interactive cheat-sheet tool for the command-line  | https://github.com/denisidoro/navi  |
-| Customize your shell environment to next level  | https://github.com/alebcay/awesome-shell  |
-| I find it useful to learn new things with the self learning courses offered by GitHub  | https://lab.github.com  |
-| A static analysis tool for shell scripts  | https://github.com/koalaman/shellcheck  |
-| A good collection of bash snippets if you are starting to learn about shell scripts in Linux  | https://github.com/alexanderepstein/Bash-Snippets  |
-| Linux workshop 10 days  | https://linuxessentials.netlify.app  |
+| Useful for self learning  | [LinuxJourney](https://linuxjourney.com)  |
+| Best one liners for Linux command line  | [Command Line fu 🥷](https://www.commandlinefu.com/commands/browse)  |
+| Improve your typing speed on the command line with this awesome tool!  | [CLI Typer](https://github.com/balzss/cli-typer)  |
+| An interactive cheat-sheet tool for the command-line  | [Navi](https://github.com/denisidoro/navi)  |
+| Customize your shell environment to next level  | [Awesome Shell 🕶️](https://github.com/alebcay/awesome-shell)  |
+| I find it useful to learn new things with the self learning courses offered by GitHub  | [GitHub Labs](https://lab.github.com)  |
+| A static analysis tool for shell scripts  | [ShellCheck](https://github.com/koalaman/shellcheck)  |
+| Beautify shell scripts?  | [beautysh 💅](https://github.com/lovesegfault/beautysh)  |
+| A good collection of bash snippets if you are starting to learn about shell scripts in Linux  | [Snippets](https://github.com/alexanderepstein/Bash-Snippets)  |
